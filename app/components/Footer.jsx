@@ -1,17 +1,28 @@
 import Link from "next/link";
+import TypewriterText from "./Typewriter";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+    <footer className="bg-dark text-gray-300 py-12 border-y border-gray-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Section: Grid with 4 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Column 1: Brand & Desc */}
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-white text-lg font-bold mb-4">Agency.io</h3>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Helping businesses grow through design, strategy, and technology.
-            </p>
+            <h1 className="text-white text-lg font-bold mb-2">Yeti Metrix</h1>
+            <h3 className="my-2 text-sm text-button">
+              HELLO! WE &apos;RE LISTENING
+            </h3>
+            <h1 className="font-bold text-3xl mt-6 mb-2 text-white">
+              Let &apos;s talk about{" "}
+            </h1>
+
+            <h1 className="font-bold text-3xl text-button mb-6 h-10">
+              {/* 👇 Pass your specific footer words here */}
+              <TypewriterText
+                strings={["your project", "your idea", "your vision"]}
+              />
+            </h1>
           </div>
 
           {/* Column 2: Services */}
