@@ -26,7 +26,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           {/* LOGO */}
-          <div className="flex-shrink-0">
+          <div className="flex items-baseline gap-1.5">
+            <img src="/yeti.png" alt="logo" className="h-8 w-8" />
             <Link href="/" className="text-2xl font-bold text-white">
               Yeti
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-button to-lightbutton">
@@ -48,7 +49,12 @@ export default function Navbar() {
               Services
             </Link>
 
-            {/* 3. About */}
+            <Link href="/projects" className={getLinkClass("/projects")}>
+              Projects
+            </Link>
+
+            {/* 4. About */}
+
             <Link href="/about" className={getLinkClass("/about")}>
               About
             </Link>

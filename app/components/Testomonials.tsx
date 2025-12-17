@@ -64,7 +64,7 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border border-gray-600 rounded-3xl px-4 py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 border border-gray-600 rounded-3xl px-4 py-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
@@ -72,6 +72,7 @@ export default function Testimonials() {
               data-aos="fade-up"
               data-aos-delay={index * 150} // Staggered animation
             >
+              <div className="absolute -inset-1 hover:bg-gradient-to-r hover:from-button/50 hover:via-purple-600/50 hover:to-blue-600/50 rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
               {/* Large Quote Icon in the background */}
               <FaQuoteRight className="absolute top-2 right-2 text-6xl text-button/70 group-hover:text-button/20 transition-colors duration-300 bg-dark p-4 rounded-full" />
 

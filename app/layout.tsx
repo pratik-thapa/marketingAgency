@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import AOSInit from "./components/AOSInit";
+import ScrollToTop from "./components/scrollToTop";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
         <AOSInit />
         <Navbar />
         {children}
+        <ScrollToTop />
         <Footer />
       </body>
     </html>
