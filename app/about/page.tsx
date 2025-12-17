@@ -356,7 +356,7 @@ export default function AboutPage() {
         </h2>
         <Link
           href="/contact"
-          className="inline-block px-8 py-4 bg-button text-white font-bold rounded-full hover:bg-button/80 transition-all shadow-lg hover:scale-105"
+          className="inline-block px-6 py-3 bg-button text-white font-semibold rounded-2xl hover:bg-button/80 transition-all duration-300 shadow-lg shadow-button/50 hover:scale-105 sm:w-auto text-center w-fit"
         >
           Book a Consultation
         </Link>
@@ -364,4 +364,3 @@ export default function AboutPage() {
     </main>
   );
 }
- 
