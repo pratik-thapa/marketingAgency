@@ -69,10 +69,10 @@ export default function Home() {
       </section>
       {/* 2. CORE PRINCIPLES SECTION (Fully Responsive) */}
       <div className="max-w-7xl mx-auto bg-dark py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
-        {/* Changed flex to grid/flex-col for mobile */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 text-white">
+        {/* 👇 FIXED: Changed 'flex' to 'grid-cols-3' for exact equal spacing */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 text-white items-center">
           {/* Column 1: Intro */}
-          <div className="flex-1" data-aos="fade-right">
+          <div data-aos="fade-right">
             <h1 className="border-2 border-lightbutton p-1 mb-4 px-4 rounded-3xl font-semibold w-fit text-sm sm:text-base">
               Yeti Metrix
             </h1>
@@ -106,9 +106,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Column 2: Image */}
+          {/* Column 2: Image (Center) */}
           <div
-            className="w-full h-[300px] sm:h-[400px] relative overflow-hidden rounded-2xl"
+            /* 👇 FIXED: Explicit height and width to fill the center grid cell */
+            className="w-full h-[200px] lg:h-[400px] relative overflow-hidden rounded-2xl shadow-2xl"
             data-aos="fade-up"
           >
             <img
@@ -119,12 +120,12 @@ export default function Home() {
           </div>
 
           {/* Column 3: Details */}
-          <div className="flex-1" data-aos="fade-left">
-            <div className="mb-6">
-              <h1 className="font-semibold text-lg sm:text-xl mb-2">
+          <div data-aos="fade-left">
+            <div className="mb-8">
+              <h1 className="font-semibold text-lg sm:text-xl mb-3 text-white">
                 Clarity in Strategy & Style
               </h1>
-              <h2 className="text-gray-500 text-sm sm:text-base leading-relaxed">
+              <h2 className="text-gray-400 text-sm sm:text-base leading-relaxed">
                 True excellence is rooted in clarity. Drawing on the Sage
                 archetype, we believe a clean mindset fosters innovation, while
                 a refined style ensures your brand message cuts through the
@@ -132,10 +133,10 @@ export default function Home() {
               </h2>
             </div>
             <div>
-              <h1 className="font-semibold text-lg sm:text-xl mb-2">
+              <h1 className="font-semibold text-lg sm:text-xl mb-3 text-white">
                 Commitment Beyond the Clock
               </h1>
-              <h2 className="text-gray-500 text-sm sm:text-base leading-relaxed">
+              <h2 className="text-gray-400 text-sm sm:text-base leading-relaxed">
                 Digital markets never sleep, and neither does our dedication. We
                 are committed to Continuous Professional Development (CPD),
                 constantly refining our skills in Next.js, SEO, and consumer
@@ -332,8 +333,8 @@ export default function Home() {
         </div>
       </section>
       {/* 5. SLIDER SECTION */}
-      <section className="relative overflow-hidden mt-12 sm:mt-20">
-        <div className="mx-auto relative z-10  lg:px-8 max-w-7xl">
+      <section className="relative overflow-hidden my-12 sm:my-20">
+        <div className="mx-auto relative z-10">
           <div className="text-center mb-8 sm:mb-12 relative">
             <h1 className="text-3xl sm:text-4xl font-semibold text-white">
               Our Partners

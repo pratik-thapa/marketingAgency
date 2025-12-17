@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     id: 1,
     name: "Sarah Mitchell",
     title: "CEO, BrightTech Solutions",
-    image: "/3.webp", // Replace with your actual image path
+    image: "/3.webp",
     quote:
       "We struggled with brand visibility until we partnered with Yeti Metrix. Their data-driven strategies and creative approach skyrocketed our engagement.",
     rating: 5,
@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
     id: 2,
     name: "James Carter",
     title: "Marketing Director, Elevate Brands",
-    image: "/2.webp", // Replace with your actual image path
+    image: "/2.webp",
     quote:
       "From website development to social media marketing, Yeti Metrix handled everything with professionalism. Our traffic and leads have doubled in just a few months.",
     rating: 5,
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
     id: 3,
     name: "Lisa Rodriguez",
     title: "Founder, EcoWear",
-    image: "/5.webp", // Replace with your actual image path
+    image: "/5.webp",
     quote:
       "Their team understood our vision and executed it flawlessly. The website they built is not just visually stunning but also optimized for conversions!",
     rating: 5,
@@ -68,18 +68,22 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="bg-[#20172D] p-8 rounded-3xl relative group border border-white/5 hover:border-button/50 transition-all duration-300"
+              // 👇 Added 'group' here. The entire card is the trigger.
+              className="bg-[#20172D] p-8 rounded-3xl relative group border border-white/5 hover:border-button/50 transition-all duration-300 cursor-pointer"
               data-aos="fade-up"
-              data-aos-delay={index * 150} // Staggered animation
+              data-aos-delay={index * 150}
             >
-              <div className="absolute -inset-1 hover:bg-gradient-to-r hover:from-button/50 hover:via-purple-600/50 hover:to-blue-600/50 rounded-3xl blur-xl opacity-20 group-hover:opacity-40 transition duration-500"></div>
-              {/* Large Quote Icon in the background */}
-              <FaQuoteRight className="absolute top-2 right-2 text-6xl text-button/70 group-hover:text-button/20 transition-colors duration-300 bg-dark p-4 rounded-full" />
+              {/* 👇 THE GLOW: Added 'pointer-events-none' so it doesn't block clicks, but relies on parent 'group' hover */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-transparent via-transparent to-transparent group-hover:from-button/50 group-hover:via-purple-600/50 group-hover:to-blue-600/50 rounded-3xl blur-xl opacity-0 group-hover:opacity-60 transition duration-500 pointer-events-none"></div>
+
+              {/* Large Quote Icon */}
+              <FaQuoteRight className="absolute top-2 right-2 text-6xl text-button/70 group-hover:text-button/20 transition-colors duration-300 bg-dark p-4 rounded-full pointer-events-none" />
 
               {/* User Profile Section */}
-              <div className=" flex flex-col items-center text-center gap-4 mb-6 relative z-10">
+              <div className="flex flex-col items-center text-center gap-4 mb-6 relative z-10 pointer-events-none">
+                {" "}
+                {/* Added pointer-events-none to children if you want clicks to pass through to card, otherwise remove it */}
                 <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-button/30 group-hover:border-button transition-colors">
-                  {/* Replace the src with your actual image paths */}
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
@@ -96,14 +100,14 @@ export default function Testimonials() {
               </div>
 
               {/* Star Rating */}
-              <div className="flex gap-1 justify-center mb-6 relative z-10">
+              <div className="flex gap-1 justify-center mb-6 relative z-10 pointer-events-none">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <FaStar key={i} className="text-button text-lg" />
                 ))}
               </div>
 
               {/* Testimonial Quote */}
-              <p className="text-gray-300 leading-relaxed relative z-10 italic">
+              <p className="text-gray-300 leading-relaxed relative z-10 italic pointer-events-none">
                 <q>{testimonial.quote}</q>
               </p>
             </div>
