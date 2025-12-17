@@ -10,6 +10,7 @@ import {
   useInView,
   useMotionValue,
 } from "framer-motion";
+import ParticleBackground from "../components/Particles";
 // 1. FLOATING ROCKET COMPONENT
 const FloatingRocket = () => {
   return (
@@ -107,7 +108,7 @@ export default function ProjectsPage() {
   return (
     <main className="bg-[#0A0118] min-h-screen relative overflow-hidden">
       <FloatingRocket />
-
+      <ParticleBackground />
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-button/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
@@ -140,7 +141,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* PROJECTS GRID */}
-      <section className="relative z-10 bg-[#20172D]">
+      <section className="relative z-10 bg-[#20172D] mt-20">
         <div className="max-w-7xl py-10 px-4 sm:px-6 lg:px-8 mx-auto">
           {/* 👇 FIXED: Added 'items-start' to prevent stretching */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
@@ -202,9 +203,9 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-
+s
       {/* CTA */}
-      <section className="py-20 text-center relative z-10">
+      <section className="pb-20 text-center relative z-10">
         <div className="mt-20 text-center">
           <div className="p-10 rounded-3xl bg-gradient-to-r from-button/20 to-blue-600/20 border border-white/10 backdrop-blur-md max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4">

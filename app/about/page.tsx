@@ -11,6 +11,7 @@ import {
   useInView,
   useMotionValue,
 } from "framer-motion";
+import ParticleBackground from "../components/Particles";
 
 // 1. FLOATING ROCKET COMPONENT
 const FloatingRocket = () => {
@@ -141,7 +142,7 @@ export default function AboutPage() {
   return (
     <main className="bg-[#0A0118] min-h-screen relative overflow-hidden">
       <FloatingRocket />
-
+      <ParticleBackground />
       {/* Background Glows */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
@@ -270,7 +271,10 @@ export default function AboutPage() {
           ></div>
         </div>
 
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative z-10">
+        <div
+          id="team"
+          className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto relative z-10"
+        >
           <div className="flex justify-center" data-aos="fade-down">
             <span className="text-white font-medium tracking-widest uppercase text-sm mb-3 block border rounded-full w-fit justify-center border-button px-4 py-2">
               Our Avengers

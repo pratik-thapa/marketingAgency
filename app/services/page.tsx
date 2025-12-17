@@ -10,6 +10,7 @@ import {
   FaSearchDollar,
   FaPenNib,
 } from "react-icons/fa";
+import ParticleBackground from "../components/Particles";
 
 // 1. Data: The Services List
 const services = [
@@ -83,6 +84,8 @@ export default function ServicesPage() {
   return (
     <main className="bg-[#0A0118] min-h-screen pt-24 pb-20 relative overflow-hidden">
       {/* Background Decor (Matching Hero) */}
+      <ParticleBackground />
+
       <div className="absolute top-0 left-0 w-full h-[500px] bg-button/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 

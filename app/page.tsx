@@ -8,14 +8,16 @@ import { FaRegEye } from "react-icons/fa";
 import Testimonials from "./components/Testomonials";
 import TypewriterText from "./components/Typewriter";
 import HeroInteractive from "./components/Interactive";
+import ParticleBackground from "./components/Particles";
 
 export default function Home() {
   return (
     <main className="bg-dark overflow-x-hidden">
       {/* 1. HERO SECTION */}
       <section className="bg-dark py-[80px] lg:py-[119px] relative overflow-hidden min-h-[90vh] flex items-center">
+        <ParticleBackground />
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] pointer-events-none"></div>
+        <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] pointer-events-none"></div>
         {/* Background Glows */}
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-button/20 rounded-full blur-[120px] pointer-events-none"></div>
 
@@ -54,7 +56,7 @@ export default function Home() {
                 </Link>
 
                 <Link
-                  href="/team"
+                  href="/about#team"
                   className="px-6 py-3 bg-white/10 text-white font-light rounded-2xl hover:bg-white/20 backdrop-blur-sm transition-all duration-300 border border-white/10 hover:scale-105 w-full sm:w-auto text-center"
                 >
                   Meet the Consultants

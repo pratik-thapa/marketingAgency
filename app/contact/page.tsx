@@ -1,6 +1,5 @@
 "use client";
-
-import Image from "next/image";
+import ParticleBackground from "../components/Particles";
 import Link from "next/link";
 import { useState } from "react";
 import {
@@ -26,6 +25,7 @@ export default function ContactPage() {
 
   return (
     <main className="bg-[#0A0118] min-h-screen relative overflow-hidden">
+      <ParticleBackground />
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-button/10 blur-[120px] rounded-full pointer-events-none" />

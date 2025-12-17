@@ -72,7 +72,7 @@ export default function Services() {
               </p>
 
               <Link
-                href="/contact"
+                href="/services"
                 className="inline-flex gap-2 justify-center px-6 py-3 border border-button text-white font-semibold text-sm rounded-full hover:bg-button transition-all shadow-lg shadow-button/10 tracking-wider"
               >
                 <LuExternalLink size={20} />

@@ -23,7 +23,7 @@ const popOutContents: PopOutItem[] = [
     id: 1,
     label: "Digital Strategy",
     img: "/hello.png",
-    href: "/services/strategy",
+    href: "/projects",
     position: { top: "10%", left: "4%" },
     delay: 1.2,
   },
@@ -31,7 +31,7 @@ const popOutContents: PopOutItem[] = [
     id: 2,
     label: "UI/UX Design",
     img: "/bar.png",
-    href: "/services/design",
+    href: "/about",
     position: { top: "1%", right: "15%" },
     delay: 1.4,
   },
@@ -47,7 +47,7 @@ const popOutContents: PopOutItem[] = [
     id: 4,
     label: "Growth Marketing",
     img: "/aware.png",
-    href: "/services/marketing",
+    href: "/services",
     position: { top: "60%", right: "-5%" },
     delay: 1.8,
   },
@@ -97,7 +97,7 @@ export default function HeroInteractive() {
             alt="Digital Team"
             width={1000}
             height={1000}
-            className="h-[30rem] w-[35rem] object-cover opacity-90 transition-transform duration-700"
+            className="h-[23rem] md:h-[30rem] w-[35rem] object-cover opacity-90 transition-transform duration-700 animate-pulse"
             priority
           />
           <div className="absolute inset-0 bg-[#1A1425]/20 mix-blend-multiply"></div>
