@@ -11,6 +11,7 @@ import {
   FaPenNib,
 } from "react-icons/fa";
 import ParticleBackground from "../components/Particles";
+import { link } from "fs";
 
 // 1. Data: The Services List
 const services = [
@@ -21,6 +22,7 @@ const services = [
       "We don't guess; we calculate. Our data-driven roadmaps align your business goals with actionable digital steps to ensure long-term growth.",
     icon: <FaRocket className="w-8 h-8" />,
     color: "from-pink-500 to-rose-500",
+    link: "/Digital",
   },
   {
     id: 2,
@@ -29,6 +31,7 @@ const services = [
       " crafting immersive experiences. We design intuitive, accessible, and stunning interfaces that keep users engaged and drive conversions.",
     icon: <FaPalette className="w-8 h-8" />,
     color: "from-purple-500 to-indigo-500",
+    link: "/services/ui-ux",
   },
   {
     id: 3,
@@ -141,7 +144,11 @@ export default function ServicesPage() {
 
               {/* Learn More Arrow (Visual Cue) */}
               <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 duration-300">
-                <span className="text-white text-xl">→</span>
+                <Link href={service.link || "#"}>
+                  <span className="text-white text-xl hover:text-button transition-colors">
+                    →
+                  </span>
+                </Link>
               </div>
             </motion.div>
           ))}

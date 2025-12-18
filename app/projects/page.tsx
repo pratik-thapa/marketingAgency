@@ -69,8 +69,8 @@ const projects = [
     description:
       "Executed a local marketing campaign for Nopalito. Focused on local SEO optimization and storytelling to drive foot traffic and online reservations.",
     image: "/nopalito.png",
-    link: "#",
-    external: false,
+    link: "https://www.nopalito.co.uk/",
+    external: true,
   },
   {
     id: 4,
@@ -112,7 +112,6 @@ export default function ProjectsPage() {
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-button/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
-
       {/* HERO SECTION */}
       <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
         <div className="flex justify-center" data-aos="fade-down">
@@ -139,7 +138,6 @@ export default function ProjectsPage() {
           industries.
         </p>
       </section>
-
       {/* PROJECTS GRID */}
       <section className="relative z-10 bg-[#20172D] mt-20">
         <div className="max-w-7xl py-10 px-4 sm:px-6 lg:px-8 mx-auto">
@@ -203,7 +201,6 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-s
       {/* CTA */}
       <section className="pb-20 text-center relative z-10">
         <div className="mt-20 text-center">

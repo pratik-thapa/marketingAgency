@@ -107,9 +107,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Get in Touch</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>hello@agency.io</li>
+              <li>yetimatrix@gmail.com</li>
               <li>+1 (555) 123-4567</li>
-              <li>123 Innovation Dr, Tech City</li>
+              <li>3 Kent Avenue, Ealing, London</li>
             </ul>
           </div>
         </div>
@@ -119,7 +119,7 @@ export default function Footer() {
 
         {/* Bottom Section: Copyright */}
         <div className="text-center text-sm text-gray-500">
-          &copy; {new Date().getFullYear()} Agency.io. All rights reserved.
+          &copy; {new Date().getFullYear()} Yetimatrix.co All rights reserved.
         </div>
       </div>
     </footer>
