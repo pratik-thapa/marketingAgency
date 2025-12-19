@@ -2,7 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaEnvelope,
+  FaAward,
+  FaCertificate,
+  FaUserGraduate,
+  FaCheckCircle,
+  FaChalkboardTeacher,
+} from "react-icons/fa";
 import { useEffect, useRef } from "react";
 import {
   motion,
@@ -12,6 +21,7 @@ import {
   useMotionValue,
 } from "framer-motion";
 import ParticleBackground from "../components/Particles";
+import { SiGoogleanalytics, SiHubspot, SiMeta } from "react-icons/si";
 
 // 1. FLOATING ROCKET COMPONENT
 const FloatingRocket = () => {
@@ -353,17 +363,213 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">
-          Ready to work with Pratik & the team?
-        </h2>
-        <Link
-          href="/contact"
-          className="inline-block px-6 py-3 bg-button text-white font-semibold rounded-2xl hover:bg-button/80 transition-all duration-300 shadow-lg shadow-button/50 hover:scale-105 sm:w-auto text-center w-fit"
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+        data-aos="fade-up"
+      >
+        <div
+          className="bg-gradient-to-r from-button/10 to-purple-600/10 rounded-3xl border border-white/10 p-8 md:p-12"
+          data-aos="fade-up"
         >
-          Book a Consultation
-        </Link>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-left">
+              <div className="flex items-center gap-3 mb-4">
+                <FaAward className="text-button text-2xl" />
+                <h2 className="text-3xl font-bold text-white">
+                  Accreditations
+                </h2>
+              </div>
+              <p className="text-gray-300 mb-8 leading-relaxed">
+                We hold ourselves to the highest industry standards. Our team
+                maintains active memberships with leading global bodies to
+                ensure our strategies are ethical, compliant, and cutting-edge.
+              </p>
+
+              {/* Membership List */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
+                  <div className="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center text-white font-bold text-xs text-center leading-none">
+                    CIM
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold">
+                      Chartered Institute of Marketing
+                    </h4>
+                    <p className="text-gray-400 text-sm">
+                      Professional Member (MCIM)
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
+                  <div className="w-12 h-12 bg-red-900/50 rounded-lg flex items-center justify-center text-white font-bold text-xs text-center leading-none">
+                    DMA
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold">
+                      Data & Marketing Association
+                    </h4>
+                    <p className="text-gray-400 text-sm">Corporate Partner</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Certifications Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-[#0A0118] p-8 rounded-2xl">
+              <div
+                className="bg-white/5 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center justify-center gap-3 hover:border-button/50 transition-colors"
+                data-aos="fade-left"
+              >
+                <SiGoogleanalytics className="text-4xl text-yellow-500" />
+                <span className="text-gray-300 text-sm font-medium">
+                  Google Analytics Certified
+                </span>
+              </div>
+              <div
+                className="bg-white/5 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center justify-center gap-3 hover:border-button/50 transition-colors"
+                data-aos="fade-right"
+              >
+                <SiHubspot className="text-4xl text-orange-500" />
+                <span className="text-gray-300 text-sm font-medium">
+                  HubSpot Agency Partner
+                </span>
+              </div>
+              <div
+                className="bg-white/5 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center justify-center gap-3 hover:border-button/50 transition-colors"
+                data-aos="fade-left"
+              >
+                <SiMeta className="text-4xl text-blue-500" />
+                <span className="text-gray-300 text-sm font-medium">
+                  Meta Blueprint Certified
+                </span>
+              </div>
+              <div
+                className="bg-white/5 p-6 rounded-2xl border border-white/10 text-center flex flex-col items-center justify-center gap-3 hover:border-button/50 transition-colors"
+                data-aos="fade-right"
+              >
+                <FaCertificate className="text-4xl text-green-500" />
+                <span className="text-gray-300 text-sm font-medium">
+                  Semrush Technical SEO
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. CPD (Continuous Professional Development) */}
+      <section className="py-20 bg-[#110a1f]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16" data-aos="fade-down">
+            <span className="text-purple-400 border border-button px-4 py-2 rounded-3xl w-fit font-bold mx-auto tracking-widest uppercase text-sm mb-2 block">
+              Always Learning
+            </span>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Continuous Professional Development (CPD)
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              The digital landscape changes daily. We allocate 10% of our
+              working hours to upskilling, ensuring your brand is never left
+              behind.
+            </p>
+          </div>
+
+          {/* CPD Cards */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div
+              className="bg-white/5 p-8 rounded-3xl border border-white/10 hover:-translate-y-2 transition-transform duration-300"
+              data-aos="fade-left"
+            >
+              <div className="w-14 h-14 bg-button/20 rounded-2xl flex items-center justify-center mb-6 text-button">
+                <FaUserGraduate size={24} />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">
+                Quarterly Upskilling
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2 text-gray-400 text-sm">
+                  <FaCheckCircle className="text-button mt-1 shrink-0" />
+                  <span>Q1: Advanced AI Prompt Engineering</span>
+                </li>
+                <li className="flex items-start gap-2 text-gray-400 text-sm">
+                  <FaCheckCircle className="text-button mt-1 shrink-0" />
+                  <span>Q2: GA4 Advanced Configuration</span>
+                </li>
+                <li className="flex items-start gap-2 text-gray-400 text-sm">
+                  <FaCheckCircle className="text-button mt-1 shrink-0" />
+                  <span>Q3: Programmatic Advertising</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Card 2 */}
+            <div
+              className="bg-white/5 p-8 rounded-3xl border border-white/10 hover:-translate-y-2 transition-transform duration-300"
+              data-aos="fade-up"
+            >
+              <div className="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 text-purple-400">
+                <FaChalkboardTeacher size={24} />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">
+                Industry Conferences
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                We attend key industry events to bring back insights before they
+                become mainstream.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 text-xs border border-purple-500/20">
+                  BrightonSEO
+                </span>
+                <span className="px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 text-xs border border-purple-500/20">
+                  MozCon
+                </span>
+                <span className="px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 text-xs border border-purple-500/20">
+                  Web Summit
+                </span>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div
+              className="bg-white/5 p-8 rounded-3xl border border-white/10 hover:-translate-y-2 transition-transform duration-300"
+              data-aos="fade-right"
+            >
+              <div className="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 text-blue-400">
+                <FaCertificate size={24} />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">
+                Mandatory Recertification
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Every team member must renew their core certifications annually
+                to ensure compliance with platform changes.
+              </p>
+              <div className="mt-4 h-2 w-full bg-gray-700 rounded-full overflow-hidden">
+                <div className="h-full bg-blue-500 w-[85%]"></div>
+              </div>
+              <p className="text-xs text-gray-500 mt-2 text-right">
+                Team Certification Status: 85%
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. CTA */}
+      <section className="py-24 text-center px-4">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Work with a team that never stops improving.
+          </h2>
+          <Link
+            href="/contact"
+            className="inline-block px-6 py-3 bg-button text-white font-semibold rounded-2xl hover:bg-button/80 transition-all duration-300 shadow-lg shadow-button/50 hover:scale-105 sm:w-auto text-center w-fit"
+          >
+            Join Forces With Us
+          </Link>
+        </div>
       </section>
     </main>
   );

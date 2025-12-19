@@ -143,10 +143,10 @@ export default function ServicesPage() {
               </p>
 
               {/* Learn More Arrow (Visual Cue) */}
-              <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 duration-300">
+              <div className="absolute bottom-4 right-8 opacity-0 group-hover:opacity-100 transition-opacity -translate-x-4 group-hover:translate-x-0 duration-300 bottom">
                 <Link href={service.link || "#"}>
-                  <span className="text-white text-xl hover:text-button transition-colors">
-                    →
+                  <span className="text-white hover:text-button transition-colors text-md bg-dark px-4 py-2 rounded-3xl">
+                  View  →
                   </span>
                 </Link>
               </div>
